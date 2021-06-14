@@ -35,7 +35,7 @@ export default function App(props) {
       {/* 👉 STEP 4 - Build a Switch with a Route for each of the components imported at the top */}
       <Switch>
         <Route path='/items-list/:itemID'>
-          <Item />
+          <Item items={stock} />
         </Route>
         <Route exact path='/' component={Home} />
         <Route path='/items-list'>
