@@ -52,6 +52,9 @@ export default function App(props) {
       <Route path='/'> 
         <Home />
       </Route>
+      {/* Alternate older sytax for routing */}
+      {/* <Route component={Home} path='/' /> */}
+      {/* <Route render={props => <Home />} path='/' /> */}
 
       </Switch>
 
