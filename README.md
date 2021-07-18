@@ -14,3 +14,6 @@ being used by another application.
 - Run `npm start` to compile the React project and spin up the app on `http://localhost:1234`.
 
 ## Rick's Notes
+- Then add
+  - npm i react-router-dom 
+    - Check Json to ensure the dependency is added. 
