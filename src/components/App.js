@@ -33,6 +33,8 @@ export default function App(props) {
             evt.preventDefault()
             history.pushState(null, null, 'foo')
           }}href='/'>Home</a> */}
+
+          {/* declarative code */}
           {<Link to='/'>Home</Link>}
           {<Link to='/items-list'>Shop</Link>}
         </div>
@@ -43,6 +45,10 @@ export default function App(props) {
         {/* With SWitch, order Routes from "more specific path" to least*/}
         {/* With Switch, the first Route wins */}
         {/* With Switch, All Routes with paths that match are rendered*/}
+
+        <Route path='/items-list/:id'>
+          <Item />
+        </Route>
 
       <Route path='/items-list'> 
       {/* <div>Our Items List</div> */}
@@ -57,8 +63,6 @@ export default function App(props) {
       {/* <Route render={props => <Home />} path='/' /> */}
 
       </Switch>
-
-
 
     </div>
   )
