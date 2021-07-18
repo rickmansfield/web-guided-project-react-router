@@ -47,7 +47,7 @@ export default function App(props) {
         {/* With Switch, All Routes with paths that match are rendered*/}
 
         <Route path='/items-list/:id'>
-          <Item />
+          <Item items={stock}/>
         </Route>
 
       <Route path='/items-list'> 

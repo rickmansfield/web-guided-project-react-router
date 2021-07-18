@@ -1,17 +1,23 @@
 import React from 'react'
 // We'll need quite a few imports from react-router-dom
-
+// useParams is if the id
+import { useParams } from 'react-router-dom'
 import ItemDetails from './ItemDetails'
 
 export default function Item(props) {
   // We get ALL items through props. We'll use the URL to find out which item is the one to show.
-  const { items } = props
+  const { items } = props;
+   // we use this hook to grab they dynamic parts of the path (:itemID).
+  const { id } = useParams();
+  console.log('The BIG :id from the url', id);
 
-  // 👉 STEP 7 - We need to pull item from items, using a parameter in the URL (:itemID)
+  // 👉 STEP 7 - We need to pull item from items, using a parameter in the URL (:id)
   // Beware! The ids are integers, whereas URL parameters are strings.
   // Beware! The JSX is expecting 'item' to exist instantly!
-  // we use this hook to grab they dynamic parts of the path (:itemID).
-  const item = {}
+ 
+  const item = items.find(it => {
+    return it.id == id
+  }) || {}
 
   return (
     <div className='item-wrapper'>
